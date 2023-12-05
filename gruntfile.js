@@ -11,6 +11,7 @@ module.exports = function (grunt) {
         //     src: 'src/<%= pkg.name %>.js',
         //     dest: 'build/<%= pkg.name %>.min.js'
         //   },
+        
         copy: {
             main: {
                 src: "dir1/**",
@@ -145,6 +146,19 @@ module.exports = function (grunt) {
                 },
             },
         },
+        gitpush: {
+          yourTarget: {
+            options: {
+              remote: 'origin', // Remote repository name
+              branch: 'dev',   // Branch to push
+              callback: function (err, stdout, stderr, cb) {
+                        console.log(stdout)
+
+                        cb();
+                    },
+            },
+          },
+        },
     });
 
     // Load the plugin that provides the "uglify" task.
@@ -158,6 +172,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-confirm");
     grunt.loadNpmTasks("grunt-prompt");
     grunt.loadNpmTasks('grunt-contrib-watch');
+    // grunt.loadNpmTasks('grunt-ssh');
+    grunt.loadNpmTasks('grunt-git');
     var fs = require('fs');
 
 
@@ -292,10 +308,15 @@ module.exports = function (grunt) {
     });
 
 /* compair hole db value*/
+
+
+/* get pull on git */
+
+/* get pull on git */
     grunt.registerTask("compair_table", ["getArgumet", "prompt:confirm", "conformTask", "prompt:confirm_insert", "insert_update_task"]);
 
     grunt.registerTask("default", ["getArgumetCD", "prompt:confirm", "conformTaskCD","prompt:confirm_create_table", "create_table"]);
-    
+     grunt.registerTask('git-push', ['gitpush']);
     // grunt.registerTask("jshint", ["jslint", "watch"]);
     // grunt.registerTask("watch", ["watch"]);
     // grunt.registerTask("run", function () {
