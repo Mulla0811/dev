@@ -1,0 +1,10 @@
+Content of compair two database.
+
+
+ after compair two db get below data 
+
+{"compair_data_found":true,"message":"changes found in two database.","result_data":"eyJjcmVhdGVfdGFibGVfZGF0YSI6W1siQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgYWNjc19oaXN0IChhY2NzX2lkIGludCBOT1QgTlVMTCAsIGFjY3NfZGF0ZSBkYXRlIE5PVCBOVUxMICwgYWNjc19wcnNuIHZhcmNoYXIoMykgTk9UIE5VTEwgLCBhY2NzX2FkZGVkIGRhdGV0aW1lIE5PVCBOVUxMIERFRkFVTFQgQ1VSUkVOVF9USU1FU1RBTVApIiwiQUxURVIgVEFCTEUgYWNjc19oaXN0IEFERCBQUklNQVJZIEtFWSAoYGFjY3NfaWRgKSwgTU9ESUZZIENPTFVNTiBgYWNjc19pZGAgSU5UIEFVVE9fSU5DUkVNRU5UIl1dLCJzZXJ2ZXIiOnsic2VydmVyMiI6eyJob3N0IjoibG9jYWxob3N0IiwidXNlcm5hbWUiOiJyb290IiwicGFzc3dvcmQiOiJyb290IiwiZGF0YWJhc2UiOiJkYXRhdGFibGUifSwic2VydmVyMSI6eyJob3N0IjoibG9jYWxob3N0IiwidXNlcm5hbWUiOiJyb290IiwicGFzc3dvcmQiOiJyb290IiwiZGF0YWJhc2UiOiJmbGFza19kYiJ9LCJ0YWJsZV9maWVsZCI6InZOYW1lIn19","process":"compair_hole_db"}
+
+ after create database get below data 
+
+{"create_table_data_found":true,"message":"create table successfully.","result":{"create_table_arr":[["CREATE TABLE IF NOT EXISTS accs_hist (accs_id int NOT NULL , accs_date date NOT NULL , accs_prsn varchar(3) NOT NULL , accs_added datetime NOT NULL DEFAULT CURRENT_TIMESTAMP)","ALTER TABLE accs_hist ADD PRIMARY KEY (`accs_id`), MODIFY COLUMN `accs_id` INT AUTO_INCREMENT"]],"err_create_table_arr":[],"success_create_table_arr":["CREATE TABLE IF NOT EXISTS accs_hist (accs_id int NOT NULL , accs_date date NOT NULL , accs_prsn varchar(3) NOT NULL , accs_added datetime NOT NULL DEFAULT CURRENT_TIMESTAMP)","ALTER TABLE accs_hist ADD PRIMARY KEY (`accs_id`), MODIFY COLUMN `accs_id` INT AUTO_INCREMENT"]},"process":"create_db"}
