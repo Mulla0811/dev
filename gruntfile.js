@@ -181,7 +181,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-confirm");
     grunt.loadNpmTasks("grunt-prompt");
     grunt.loadNpmTasks('grunt-contrib-watch');
-    // grunt.loadNpmTasks('grunt-ssh');
+    grunt.loadNpmTasks('grunt-ssh');
     grunt.loadNpmTasks('grunt-git');
     var fs = require('fs');
 
