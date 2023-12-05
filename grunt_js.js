@@ -21,7 +21,7 @@ module.exports = function (grunt) {
     });
 
     // Load the plugin that provides the "uglify" task.
-
+///tests sb
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-jslint");

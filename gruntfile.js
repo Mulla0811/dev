@@ -146,16 +146,25 @@ module.exports = function (grunt) {
                 },
             },
         },
+        gitadd: {
+          task: {
+            options: {
+              all: true,
+            },
+          },
+        },
+        gitcommit: {
+          task: {
+            options: {
+              message: 'start',
+            },
+          },
+        },
         gitpush: {
-          yourTarget: {
+          task: {
             options: {
               remote: 'origin', // Remote repository name
-              branch: 'dev',   // Branch to push
-              callback: function (err, stdout, stderr, cb) {
-                        console.log(stdout)
-
-                        cb();
-                    },
+              branch: 'main',   // Branch to push
             },
           },
         },
@@ -316,7 +325,8 @@ module.exports = function (grunt) {
     grunt.registerTask("compair_table", ["getArgumet", "prompt:confirm", "conformTask", "prompt:confirm_insert", "insert_update_task"]);
 
     grunt.registerTask("default", ["getArgumetCD", "prompt:confirm", "conformTaskCD","prompt:confirm_create_table", "create_table"]);
-     grunt.registerTask('git-push', ['gitpush']);
+   
+     grunt.registerTask('git-push', ['gitadd', 'gitcommit', 'gitpush']);
     // grunt.registerTask("jshint", ["jslint", "watch"]);
     // grunt.registerTask("watch", ["watch"]);
     // grunt.registerTask("run", function () {
