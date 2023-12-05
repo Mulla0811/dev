@@ -8,3 +8,7 @@ Content of compair two database.
  after create database get below data 
 
 {"create_table_data_found":true,"message":"create table successfully.","result":{"create_table_arr":[["CREATE TABLE IF NOT EXISTS accs_hist (accs_id int NOT NULL , accs_date date NOT NULL , accs_prsn varchar(3) NOT NULL , accs_added datetime NOT NULL DEFAULT CURRENT_TIMESTAMP)","ALTER TABLE accs_hist ADD PRIMARY KEY (`accs_id`), MODIFY COLUMN `accs_id` INT AUTO_INCREMENT"]],"err_create_table_arr":[],"success_create_table_arr":["CREATE TABLE IF NOT EXISTS accs_hist (accs_id int NOT NULL , accs_date date NOT NULL , accs_prsn varchar(3) NOT NULL , accs_added datetime NOT NULL DEFAULT CURRENT_TIMESTAMP)","ALTER TABLE accs_hist ADD PRIMARY KEY (`accs_id`), MODIFY COLUMN `accs_id` INT AUTO_INCREMENT"]},"process":"create_db"}
+
+
+
+
